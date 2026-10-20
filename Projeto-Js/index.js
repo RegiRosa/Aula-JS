@@ -81,7 +81,7 @@ if (total > 100) {
 console.log(frete)*/
 
 //Tipos Primitivos
-const preco = 19.9;
+/*const preco = 19.9;
 console.log(typeof preco);
 
 const nome = "Lucas;"
@@ -94,4 +94,114 @@ const vazio = null;
 console.log(typeof vazio);
 
 let indefinido;
-console.log(typeof indefinido);
+console.log(typeof indefinido);*/
+
+//Stings e Template Literals
+
+/*const nome1 = "Lucas";
+const nome2 = 'Maria';
+const nome3 = `Joao`;
+const idade = 40;
+
+const nomeCompleto = "Regiane Rosa";
+
+//length = comprimento
+console.log(nomeCompleto.length)
+
+//toUpperCase (maiuscula) é uma funcao, so da para rodar se colocar parenteses
+console.log(nomeCompleto.toUpperCase())
+
+//toLowerCase(minusculo)
+console.log(nomeCompleto.toLowerCase())
+
+//${} esses dois chama a variavel
+console.log(`Ola, meu nome é ${nomeCompleto} e tenho ${idade}.`)*/
+
+//Conversoes de Tipo
+
+//converter string para numero
+console.log(Number("123"));
+
+//converter para numero inteiro
+console.log(parseInt("10.9"));
+
+//converter para numero quebrado
+console.log(parseFloat("10.9"));
+
+//converter para string
+console.log(String("123"));
+
+//falso
+console.log(Boolean(0));
+
+//verdadeiro
+console.log(Boolean(1));
+
+//falso
+console.log(Boolean(""));
+
+//peco um prompt p o usuario p rodar no navegador
+//const texto1 = prompt("Digite um numero")
+//console.log(texto + 5)
+
+//const texto = Number(prompt("Digite um numero"));
+//console.log(texto + 5)
+
+//arredondamento e formatando numeros
+
+//const preco = 10.987;
+
+//para colocar qtas casas decimais quero, mas tenho que colocar () depois
+//console.log(preco.toFixed(2));
+
+//arredondar para mais proximo
+//console.log(Math.round(preco));
+
+//arredondar para baixo
+//console.log(Math.floor(preco));
+
+//arredondar para cima
+//console.log(Math.ceil(preco));
+
+//Operadores Aritmeticos
+
+//console.log(2 - 3);
+//console.log(5 - 2);
+//console.log(4 * 2);
+//console.log(10 / 2);
+//console.log(10 % 3);
+//console.log(2 ** 3); //potencia
+
+//Operadores de comparacao
+//console.log(5 == "5"); // igual frouxo
+//console.log(5 == 5); // igual frouxo
+
+//console.log(5 === "5"); //igual estrito
+//console.log(5 === 5); //igual estrito
+
+//console.log(5 != "5"); //diferente frouxo - diferente
+//console.log(5 != 7); //diferente frouxo
+
+//console.log(5 !== "5"); //diferente estrito
+//console.log(5 !== 7); //diferente estrito
+
+//Media de duas notas
+//const n1 = Number(prompt("Primeira nota:"));
+//const n2 = Number(prompt("Primeira nota:"));
+
+//const media = (n1 + n2) / 2;
+
+//quero minha resposta com 1 casa decimal
+//console.log(`Media: ${media.toFixed(1)}`);
+
+//IMC (Indice de massa Corporal)
+//const peso = Number(prompt("Digite seu peso (kg):"));
+//const altura = Number(prompt("Altura (m):"));
+
+//sempre criar uma variavel para guardar o calculo
+//const IMC = peso / (altura ** 2);
+
+//console.log(`IMC: ${IMC.toFixed(2)}`);
+
+//aparece direto no prompt
+//alert(`IMC: ${IMC.toFixed(2)}`);
