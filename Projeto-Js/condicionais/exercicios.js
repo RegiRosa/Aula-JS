@@ -165,3 +165,37 @@ if (Number.isNaN(a) || Number.isNaN(b) || Number.isNaN(c)) {
     if (c > maior) maior = c;
     console.log("O maior número é: " + maior);
 }*/
+
+/*Peça dois números e uma operação (+, -, *, /). Use switch para calcular, com default para operações inválidas e checagem 
+de divisão por zero.*/
+
+const N1 = Number(prompt("Me informe o primeiro numero:"));
+const N2 = Number(prompt("Me informe o segundo numero:"));
+const operacao = prompt("Diga uma operacao para fazer com os dois numeros solicitados (+, -, *, /):");
+let resultado;
+
+if(Number.isNaN)(N1) || Number.isNaN(N1) {
+
+} else {
+    switch (operacao) {
+case "+":
+       resultado: n1 + n2 
+            console.log(`Resultado: ${resultado}`);
+    break;
+case "-":
+       resultado: n1 - n2 
+            console.log(`Resultado: ${resultado}`);
+    break;
+case "*":
+       resultado: n1 * n2 
+            console.log(`Resultado: ${resultado}`);   
+    break;
+        if (N2 === 0) {
+            resultado = N1 / N2;
+            console.log(`Resultado: ${resultado}`);
+        }
+    break;
+
+    default:
+        console.log("Operacao invalida.");
+}
