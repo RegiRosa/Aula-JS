@@ -64,3 +64,85 @@
 
 //delete aluno.cidade;
 //console.log(aluno);
+
+//Filter, Map, Find e Reduce
+// function dobro(n) {
+//     return n * 2;
+// }
+
+// const dobroArrow = (n) => {
+//     return n * 2;
+// }
+
+// const dobroCurto = n => n * 2;
+
+// //Filter
+
+// console.log("=== FILTER === ")
+
+const lucas = { name: "Lucas", lastName: "Garcez", age: 20 };
+const maria = { name: "Maria", lastName: "Oliveira", age: 17 };
+const joao = { name: "João", lastName: "Silva", age: 18 };
+const ana = { name: "Ana", lastName: "Santos", age: 22 };
+const people = [lucas, maria, joao, ana];
+
+//valor, posicao, array
+// const maiores = people.filter((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Value", value.name);
+//     console.log("--------------------");
+//     return value.age >= 18; //age - idade
+// });
+// console.log("Resultado filter:", maiores);
+
+// console.log("=====MAP===="); //pode trazer todo resultado maiusculo e minusculo
+// const nomes = people.map((value, index, array) => {
+//     console.log("Index", index);
+//     console.log("Value", value.name);
+
+//     return value.name;
+// });
+
+//console.log("Resultado filter", maiores);
+
+console.log("===== Find =====");
+const mariaEncontrada = people.find((value, index, array) => {
+    console.log("Index:", index);
+    console.log("Value:", value.name);
+    return value.name === "Maria";
+
+});
+
+console.log("Resultado find:", mariaEncontrada);
+
+const pedro = people.find(p => p.name === "Pedro");
+console.log(pedro);
+if (pedro === undefined) {
+    console.log("Pessa nao encontrada")
+}
+
+console.log("==reduce==");
+
+// array.reduce((acumulador, elementoAtual, indice, arrayOriginal) => {
+
+// }, valorInicial);
+
+const somaIdades = people.reduce((acc, value, index, array) => {
+    console.log("Index:", index);
+    console.log("Value:", value.name, value.age);
+    console.log("Acumulador antes:", acc);
+    return acc + value.age;
+}, 0)
+console.log("Resultado reduce", somaIdades);
+
+const nomesMaiores = people
+.filter(p => p.age >= 18) // esse p significa cada nome que vai aparecer ali
+.map(p => p.name.toUpperCase()); //vai pegar quem e maior 18 e transformar num maiusculo
+
+console.log(nomesMaiores);
+
+//Fazer a soma das idades quem tem 18 ou mais
+const somarMaiores = people
+.filter(p => p.age >= 18)
+.reduce((acc, p) => acc + p.age, 0);
+console.log(nomesMaiores);
