@@ -193,28 +193,66 @@
 // Remover um item pelo id
 // Dado um array de tarefas com id e texto, use filter para devolver a lista sem a tarefa de id 2.
 
-const tarefas = [
-  { id: 1, texto: "Estudar" },
-  { id: 2, texto: "Treinar" },
-  { id: 3, texto: "Dormir" },
-];
-const lista = tarefas.filter(value => value.id !== 2)
-console.log(lista)
+// const tarefas = [
+//   { id: 1, texto: "Estudar" },
+//   { id: 2, texto: "Treinar" },
+//   { id: 3, texto: "Dormir" },
+// ];
+// const lista = tarefas.filter(value => value.id !== 2)
+// console.log(lista)
 
-// Primeiro maior que 10
-// Dado const nums = [4, 8, 12, 15, 3], use find para achar o primeiro número maior que 10.
+// // Primeiro maior que 10
+// // Dado const nums = [4, 8, 12, 15, 3], use find para achar o primeiro número maior que 10.
 
-// const nums = [4, 8, 12, 15, 3];
-// const primeiro = nums.find(n => n > 10);
+// // const nums = [4, 8, 12, 15, 3];
+// // const primeiro = nums.find(n => n > 10);
 
-//Dado um array de pessoas com nome e idade, ache a pessoa chamada "Bruno".
-const pessoas = [
-  { nome: "Ana", idade: 20 },
-  { nome: "Bruno", idade: 17 },
-  { nome: "Carla", idade: 30 },
-]
+// //Dado um array de pessoas com nome e idade, ache a pessoa chamada "Bruno".
+// const pessoas = [
+//   { nome: "Ana", idade: 20 },
+//   { nome: "Bruno", idade: 17 },
+//   { nome: "Carla", idade: 30 },
+// ]
 
-const pessoa = pessoas.find(value => value.nome === "Bruno")
-console.log(pessoa)
+ //const pessoa = pessoas.find(value => value.nome === "Bruno")
+// console.log(pessoa)
 
+	
+// //Somar números
+// //Dado const nums = [3, 5, 2, 10], use reduce para somar tudo.
+// const soma = nums.reduce((acumulador, value) => acumulador + value, 0); //preciso do valor inicial "0", 
+// // faz a conta 0 + 3, 3 + 5...
+// console.log(soma);
 
+// Contar os pares
+// Dado const nums = [1, 2, 3, 4, 6], use reduce para contar quantos números são pares.
+
+// const nums = [1, 2, 3, 4, 6];
+//  const pares = nums.reduce((acumulador, value) => (value % 2 === 0 ? acumulador + 1 : acumulador), 0 ); 
+// // console.log(pares);
+//condicao do meu ternario (isso ? é o "se"---"se nao" é o simbolo :)
+
+// Maior valor
+// Dado const nums = [7, 3, 19, 4], use reduce para achar o maior número (sem usar Math.max).
+
+// const nums = [7, 3, 19, 4];
+// const maior = nums.reduce((acumulador, value) => (value > acumulador ? value : acumulador), -Infinity); //se o n for maior que meu acumulador entao, traga o acumulador
+// console.log(maior);
+
+// Total do carrinho
+// Dado um carrinho com itens { nome, preco, qtd }, calcule o total (preco * qtd de cada item, somados).
+// const carrinho = [
+//   { nome: "Caneta", preco: 2, qtd: 5 },
+//   { nome: "Caderno", preco: 15, qtd: 2 },
+//   { nome: "Borracha", preco: 1, qtd: 3 },
+// ];
+
+// const total = carrinho.reduce((acumulador, value) => acumulador + value.preco * value.qtd, 0 );
+// console.log(total); 
+
+// Média das notas
+// Dado const notas = [8, 6, 9, 5], calcule a média usando reduce para somar.
+const notas = [8, 6, 9, 5];
+const soma = notas.reduce((acumulador, nota) => acumulador + nota, 0);
+const media = notas.length === 0 ? 0 : soma /notas.length
+console.log(media); 

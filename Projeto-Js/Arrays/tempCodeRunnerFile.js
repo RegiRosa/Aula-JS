@@ -1,4 +1,2 @@
-const nums = [1, 2, 3, 4, 5, 6, 7, 8];
-
-// const pares = nums.filter(value => value % 2 === 0);
-// console.log(pares);
+const pares = nums.reduce((acumulador, value) => (value % 2 === 0 ? acumulador + 1 : acumulador), 0 ); 
+// // console.log(pares);
